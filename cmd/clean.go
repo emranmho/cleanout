@@ -71,8 +71,10 @@ tempcleaner clean --path ~/Downloads --days 14 --dry-run --verbose
 			return
 		}
 
-		fmt.Println("Scanning:", path)
-		fmt.Printf("Looking for files older than %d days...\n", days)
+		if verbose {
+			fmt.Println("🔍 Scanning:", path)
+			fmt.Printf("🕒 Looking for files older than %d days...\n", days)
+		}
 
 		result, err := internal.CleanDirectory(path, days, dryRun, verbose)
 		if err != nil {
