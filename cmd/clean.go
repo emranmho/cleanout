@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/emranmho/tempcleaner/internal"
+	"github.com/emranmho/cleanout/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -36,27 +36,27 @@ Supports dry-run mode to preview deletions.`,
 # If you just run 'clean' with no flags, it will:
 # - Use the system temp directory (like C:\Users\You\AppData\Local\Temp or /tmp)
 # - Delete files older than 7 days
-tempcleaner clean
+cleanout clean
 
 # 🔍 Dry-run Mode
 # Preview what files would be deleted without actually deleting them
-tempcleaner clean --dry-run
+cleanout clean --dry-run
 
 # 🕒 Customize Age of Files
 # Delete files older than 30 days
-tempcleaner clean --days 30
+cleanout clean --days 30
 
 # 📁 Custom Path
 # Clean old files in a specific folder
-tempcleaner clean --path "C:\MyCache" --days 10
+cleanout clean --path "C:\MyCache" --days 10
 
 # 🔊 Verbose Mode
 # Show detailed log while deleting
-tempcleaner clean --path /tmp --days 5 --verbose
+cleanout clean --path /tmp --days 5 --verbose
 
 # 💡 Combine flags
 # Full command: clean a custom folder, show details, preview only
-tempcleaner clean --path ~/Downloads --days 14 --dry-run --verbose
+cleanout clean --path ~/Downloads --days 14 --dry-run --verbose
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Clean and normalize the path

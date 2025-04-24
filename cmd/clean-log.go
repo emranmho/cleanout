@@ -23,10 +23,10 @@ var autoCleanLogCmd = &cobra.Command{
 	Long:  "Manually delete log files older than a given number of days from the logs directory.",
 	Example: `
 # Delete logs older than 7 days (default)
-  tempcleaner clean-logs
+  cleanout clean-logs
 
   # Delete logs older than 14 days
-  tempcleaner clean-logs --days 14
+  cleanout clean-logs --days 14
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
 

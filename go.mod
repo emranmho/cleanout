@@ -1,4 +1,4 @@
-module github.com/emranmho/tempcleaner
+module github.com/emranmho/cleanout
 
 go 1.24.2
 
