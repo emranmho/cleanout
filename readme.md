@@ -191,7 +191,7 @@ make clean   # Clean build artifacts
 
 [//]: # (```)
 
-## 🗺️ Roadmap
+## 📌 Roadmap
 
 - [ ] Add scheduler integration for automated periodic log cleanup
 - [ ] Create interactive terminal UI
@@ -199,7 +199,7 @@ make clean   # Clean build artifacts
 - [X] Multi-platform builds
 
 
-## 📄 License
+## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
