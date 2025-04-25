@@ -45,14 +45,14 @@ cleanout/
 
 ## 💻 Installation
 
-[//]: # (### Using Go)
+### Using Go
 
-[//]: # ()
-[//]: # (```bash)
 
-[//]: # (go install github.com/emranmho/cleanout@latest)
+```bash
 
-[//]: # (```)
+go install github.com/emranmho/cleanout@latest
+
+```
 
 ### Manual Installation
 
