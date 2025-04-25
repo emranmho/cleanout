@@ -28,9 +28,15 @@ cleanout/
 ├── internal/                # Internal packages
 │   ├── cleaner.go           # Core file cleaning logic
 │   └── util.go              # Utilities and logging
+├── scripts/                 # Build and automation scripts
+│   ├── build.ps1            # PowerShell build script for cross-platform
+│   ├── Makefile             # Unix-style build commands
+│   └── winbuild.bat         # Installation script for windows only
+├── build/                   # Build artifacts and release binaries
+│   ├── cleanout.exe         # Windows build outputs
+│   ├── cleanout-linux       # Linux build outputs
+│   └── cleanout-mac         # macOS build outputs
 ├── logs/                    # Generated logs (created at runtime)
-├── build.ps1                # PowerShell build script for cross-platform
-├── Makefile                 # Unix-style build commands
 ├── go.mod                   # Go module definition
 ├── go.sum                   # Go module checksums
 ├── main.go                  # Application entry point
@@ -39,11 +45,14 @@ cleanout/
 
 ## 💻 Installation
 
-### Using Go
+[//]: # (### Using Go)
 
-```bash
-go install github.com/emranmho/cleanout@latest
-```
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (go install github.com/emranmho/cleanout@latest)
+
+[//]: # (```)
 
 ### Manual Installation
 
@@ -163,7 +172,7 @@ Cleanout automatically generates detailed logs of all operations in the `logs` d
 
 This will generate:
 - `cleanout.exe` for Windows
-- `cleanout` for Linux
+- `cleanout-linux` for Linux
 - `cleanout-mac` for macOS
 
 #### Using Makefile (Unix/Linux/macOS):
@@ -173,24 +182,22 @@ make build   # Build for current platform
 make clean   # Clean build artifacts
 ```
 
-### Running Tests
+[//]: # (### Running Tests)
 
-```bash
-go test ./...
-```
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (go test ./...)
+
+[//]: # (```)
 
 ## 🗺️ Roadmap
 
-- [ ] Add automated tests
-- [ ] Implement file pattern matching for more targeted cleanup
-- [ ] Add scheduler integration for automated periodic cleanup
+- [ ] Add scheduler integration for automated periodic log cleanup
 - [ ] Create interactive terminal UI
-- [ ] Add support for cleaning based on file types
-- [ ] Implement file size-based cleaning options
-- [ ] Add file recovery option for recently deleted files
-- [ ] Create system service integration for background operation
-- [ ] Add configuration file support
-- [ ] Implement cloud storage cleanup options
+- [X] Manual log cleanup support
+- [X] Multi-platform builds
+
 
 ## 📄 License
 
